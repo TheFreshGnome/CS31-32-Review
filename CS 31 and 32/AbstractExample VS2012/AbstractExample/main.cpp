@@ -12,6 +12,10 @@
 #include "SuburuImpreza.h"
 #include "RedSuburuImpreza.h"
 #include "Tesla.h"
+#include "TeslaModel3.h"
+#include "Chevy.h"
+
+
 
 int main(int argc, const char * argv[]) {
     using namespace cs31;
@@ -26,12 +30,21 @@ int main(int argc, const char * argv[]) {
     r.drive();
     Tesla t( "Model S", "brown", 75000 );
     t.drive();
+    TeslaModel3 t3("orange", 40000);
+    t3.getModel();
+    t3.vroom();
     
+    Chevy C("Volt", "black", 30000);
+    C.getPrice();
+
     Car * ptrCar = &t;
     ptrCar->drive( );
     
     ptrCar = &s;
     ptrCar->drive( );
+
+    ptrCar = &C;
+    ptrCar->drive();
     
     return 0;
 }
